@@ -1,1 +1,1 @@
-# projeto-todolist
+# project-todolist

@@ -11,7 +11,7 @@ export const FormItems = () => {
 
     const handleAddButton = (e: FormEvent) => {
         e.preventDefault();
-        if (inputItems) {
+        if (inputItems.trim()) {
             listCtx?.addList(inputItems)
             setInputItems('');
         }

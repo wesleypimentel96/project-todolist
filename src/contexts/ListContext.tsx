@@ -17,7 +17,8 @@ export const ListContext = createContext<ListContextType | null>(null)
 
 export const ListContextProvider = ({ children }: { children: ReactNode }) => {
     const [list, setList] = useState<Items[]>(
-        JSON.parse(localStorage?.getItem(STORAGE_KEY_LIST) || '[]')
+        () => typeof window !== 'undefined'
+            ? JSON.parse(localStorage.getItem(STORAGE_KEY_LIST) || '[]') : []
     );
 
     useEffect(() => {

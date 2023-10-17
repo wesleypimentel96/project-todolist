@@ -1,3 +1,5 @@
+'use client'
+
 import { ListContext } from '@/contexts/ListContext';
 import { FormEvent, useContext, useState } from 'react';
 import { MdOutlineAddCircleOutline } from 'react-icons/md';

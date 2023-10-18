@@ -14,7 +14,7 @@ export const ThemeContext = createContext<ThemeContextType | null>(null)
 export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
 
     const [theme, setTheme] = useState(
-        typeof window !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : 'ligth'
+         localStorage.getItem(STORAGE_KEY) || 'ligth'
     );
 
 
